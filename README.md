@@ -1,6 +1,6 @@
 # SwiftNetworking
 
-[![CI Status](http://img.shields.io/travis/patrick.montalto@adnas.com/SwiftNetworking.svg?style=flat)](https://travis-ci.org/patrick.montalto@adnas.com/SwiftNetworking)
+[![CI Status](http://img.shields.io/travis/pmontalto@gmail.com/SwiftNetworking.svg?style=flat)](https://travis-ci.org/pmontalto@gmail.com/SwiftNetworking)
 [![Version](https://img.shields.io/cocoapods/v/SwiftNetworking.svg?style=flat)](http://cocoapods.org/pods/SwiftNetworking)
 [![License](https://img.shields.io/cocoapods/l/SwiftNetworking.svg?style=flat)](http://cocoapods.org/pods/SwiftNetworking)
 [![Platform](https://img.shields.io/cocoapods/p/SwiftNetworking.svg?style=flat)](http://cocoapods.org/pods/SwiftNetworking)
