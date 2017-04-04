@@ -1,0 +1,22 @@
+{
+  "name": "SwiftNetworking",
+  "version": "0.1.0",
+  "summary": "A short description of SwiftNetworking.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/patrick.montalto@adnas.com/SwiftNetworking",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "patrick.montalto@adnas.com": "pmontalto@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/patrick.montalto@adnas.com/SwiftNetworking.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "SwiftNetworking/Classes/**/*"
+}
