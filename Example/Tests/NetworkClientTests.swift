@@ -1,6 +1,5 @@
 import XCTest
 @testable import SwiftNetworking
-import SwiftJSONKit
 
 final class NetworkClientTests: XCTestCase {
     

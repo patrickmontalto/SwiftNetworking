@@ -1,7 +1,5 @@
 PODS:
-  - SwiftJSONKit (0.1.0)
-  - SwiftNetworking (0.1.0):
-    - SwiftJSONKit
+  - SwiftNetworking (0.1.0)
 
 DEPENDENCIES:
   - SwiftNetworking (from `../`)
@@ -11,8 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SwiftJSONKit: a4673a907da59e77ff95b94d3e228b85a24a7c33
-  SwiftNetworking: 0cf2a134401c9896bb4b1d1bfc2d6b7a1ba4a288
+  SwiftNetworking: fd8d2aedb7e6c9c6387098cfd7fc3406a8e13562
 
 PODFILE CHECKSUM: 11830c1ae8c571fd210dc503d5b990deee666411
 
