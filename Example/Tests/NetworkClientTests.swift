@@ -3,9 +3,14 @@ import XCTest
 
 final class NetworkClientTests: XCTestCase {
     
+    // MARK: - Properties
+    
+    let baseURL = URL(string: "http://example.com/api/v1/")!
+    
+    // MARK: - Tests
     
     func testBuildRequest() {
-        let baseURL = URL(string: "http://example.com/api/v1/")!
+        
         let client = NetworkClient(baseURL: baseURL)
         
         // Request without parameters
@@ -25,5 +30,21 @@ final class NetworkClientTests: XCTestCase {
         let queryItems = [URLQueryItem(name: "query", value: "science")]
         let request3 = client.buildRequest(path: "search", queryItems: queryItems)
         XCTAssertEqual(url3, request3.url)
+    }
+    
+    func testRequest() {
+        let session = MockSession { (request) -> (NetworkResult) in
+            return .failure(NetworkClient.Error.unknown)
+        }
+        
+        let client = NetworkClient(baseURL: baseURL, session: session)
+        client.request("me")
+        
+        let url1 = URL(string: "http://example.com/api/v1/me")!
+        
+        let request = session.interactions.first!.0
+        XCTAssertEqual("GET", request.httpMethod)
+        XCTAssertEqual(url1, request.url)
+        
     }
 }

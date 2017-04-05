@@ -57,8 +57,8 @@ public class NetworkClient {
     ///
     /// - parameter method: HTTP method
     /// - parameter path: path component
-    /// - parameter queryItems: Optional array of query items
-    /// - parameter parameters: Optional JSONDictionary of params
+    /// - parameter queryItems: optional array of query items
+    /// - parameter parameters: optional JSONDictionary of params
     /// - returns: Expected URLRequest
     func buildRequest(method: Method = .get, path: String, queryItems: [URLQueryItem] = [], parameters: JSONDictionary? = nil) -> URLRequest {
         // Create url with path component
@@ -85,8 +85,14 @@ public class NetworkClient {
         return request
         
     }
-    
-    func request(_ method: Method = .get, _ path: String, queryItems: [URLQueryItem] = [], parameters: JSONDictionary? = nil, completion: ((Result<(Data?, URLResponse)>) -> Void)?) {
+    /// Build and send a URLRequest.
+    ///
+    /// - parameter method: HTTP method
+    /// - parameter path: path component
+    /// - parameter queryItems: optional array of query items
+    /// - parameter parameters: optional JSONDictionary of params
+    /// - parameter completion: completion block called containing a Result object
+    func request(method method: Method = .get, _ path: String, queryItems: [URLQueryItem] = [], parameters: JSONDictionary? = nil, completion: ((NetworkResult) -> (Void))? = nil) {
         // Make request
         let request = buildRequest(method: method, path: path, queryItems: queryItems, parameters: parameters)
         
@@ -94,7 +100,7 @@ public class NetworkClient {
         session.dataTask(with: request) { (data, response, error) in
             // Success
             if let response = response {
-                completion?(.success(data, response))
+                completion?(.success(response, data))
                 return
             }
 
