@@ -35,6 +35,10 @@ public class NetworkClient {
         }
     }
     
+    enum Error: Swift.Error {
+        case unknown
+    }
+    
     // MARK: - Properties
     
     public let baseURL: URL
@@ -81,4 +85,33 @@ public class NetworkClient {
         return request
         
     }
+    
+    func request(_ method: Method = .get, _ path: String, queryItems: [URLQueryItem] = [], parameters: JSONDictionary? = nil, completion: ((Result<(Data?, URLResponse)>) -> Void)?) {
+        // Make request
+        let request = buildRequest(method: method, path: path, queryItems: queryItems, parameters: parameters)
+        
+        // Send request
+        session.dataTask(with: request) { (data, response, error) in
+            // Success
+            if let response = response {
+                completion?(.success(data, response))
+                return
+            }
+
+            // Failure
+            completion?(.failure(error ?? Error.unknown))
+        }.resume()
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
