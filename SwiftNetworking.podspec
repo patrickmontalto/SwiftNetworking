@@ -9,11 +9,9 @@
 Pod::Spec.new do |s|
   s.name             = 'SwiftNetworking'
   s.version          = '0.1.0'
-  s.summary          = 'A micro networking framework for Swift 3'
+  s.summary          = 'A micro networking framework for Swift'
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  s.description      = 'SwiftNetworking provides a thin NetworkClient class that builds and executes URLRequests.'
 
   s.homepage         = 'https://github.com/patrickmontalto/SwiftNetworking'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -26,5 +24,4 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'SwiftJSONKit'
 end

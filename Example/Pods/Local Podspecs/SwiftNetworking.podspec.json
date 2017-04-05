@@ -1,8 +1,8 @@
 {
   "name": "SwiftNetworking",
   "version": "0.1.0",
-  "summary": "A micro networking framework for Swift 3",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "A micro networking framework for Swift",
+  "description": "SwiftNetworking provides a thin NetworkClient class that builds and executes URLRequests.",
   "homepage": "https://github.com/patrickmontalto/SwiftNetworking",
   "license": {
     "type": "MIT",
@@ -18,10 +18,5 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "SwiftNetworking/Classes/**/*",
-  "dependencies": {
-    "SwiftJSONKit": [
-
-    ]
-  }
+  "source_files": "SwiftNetworking/Classes/**/*"
 }
