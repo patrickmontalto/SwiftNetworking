@@ -65,7 +65,7 @@ client.request(path: "me") { (result) in
 ```
 ## Author
 
-patrick.montalto@adnas.com, pmontalto@gmail.com
+pmontalto@gmail.com
 
 ## License
 
