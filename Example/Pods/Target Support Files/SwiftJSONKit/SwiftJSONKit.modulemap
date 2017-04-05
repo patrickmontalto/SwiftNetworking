@@ -1,0 +1,6 @@
+framework module SwiftJSONKit {
+  umbrella header "SwiftJSONKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,9 +1,9 @@
 {
   "name": "SwiftNetworking",
   "version": "0.1.0",
-  "summary": "A short description of SwiftNetworking.",
+  "summary": "A micro networking framework for Swift 3",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/patrick.montalto@adnas.com/SwiftNetworking",
+  "homepage": "https://github.com/patrickmontalto/SwiftNetworking",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +12,16 @@
     "patrick.montalto@adnas.com": "pmontalto@gmail.com"
   },
   "source": {
-    "git": "https://github.com/patrick.montalto@adnas.com/SwiftNetworking.git",
+    "git": "https://github.com/patrickmontalto/SwiftNetworking.git",
     "tag": "0.1.0"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "SwiftNetworking/Classes/**/*"
+  "source_files": "SwiftNetworking/Classes/**/*",
+  "dependencies": {
+    "SwiftJSONKit": [
+
+    ]
+  }
 }

@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/patrick.montalto@adnas.com/SwiftNetworking'
+  s.homepage         = 'https://github.com/patrickmontalto/SwiftNetworking'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'patrick.montalto@adnas.com' => 'pmontalto@gmail.com' }
   s.source           = { :git => 'https://github.com/patrickmontalto/SwiftNetworking.git', :tag => s.version.to_s }
@@ -26,5 +26,5 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'SwiftJSONKit'
 end
