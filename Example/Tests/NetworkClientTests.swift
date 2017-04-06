@@ -38,7 +38,7 @@ final class NetworkClientTests: XCTestCase {
         }
         
         let client = NetworkClient(baseURL: baseURL, session: session)
-        client.request("me")
+        client.request(path: "me")
         
         let url1 = URL(string: "http://example.com/api/v1/me")!
         

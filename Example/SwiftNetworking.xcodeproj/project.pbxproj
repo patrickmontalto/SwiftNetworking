@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		607FACEC1AFB9204008FA782 /* NetworkClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* NetworkClientTests.swift */; };
+		CDB408171F08388300268F6A /* SwiftNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = CDB408151F08388300268F6A /* SwiftNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDB4081E1F0838D600268F6A /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB4081B1F0838D600268F6A /* NetworkClient.swift */; };
+		CDB4081F1F0838D600268F6A /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB4081C1F0838D600268F6A /* Result.swift */; };
 		D27E94591E95338D00482F9B /* MockSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27E94581E95338D00482F9B /* MockSession.swift */; };
 		D4C8DC10C075ADC23D5C83FC /* Pods_SwiftNetworking_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF7A69FEB0E311B8AC3DCDE3 /* Pods_SwiftNetworking_Tests.framework */; };
 /* End PBXBuildFile section */
@@ -21,6 +24,11 @@
 		A8BF2EB58EBE4133A076E906 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		BB95EF592F2F435BC0CF0BEB /* Pods-SwiftNetworking_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftNetworking_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftNetworking_Tests/Pods-SwiftNetworking_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C7ADB888DCEA48B7AFE48054 /* Pods-SwiftNetworking_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftNetworking_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftNetworking_Tests/Pods-SwiftNetworking_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		CDB408131F08388300268F6A /* SwiftNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDB408151F08388300268F6A /* SwiftNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftNetworking.h; sourceTree = "<group>"; };
+		CDB408161F08388300268F6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDB4081B1F0838D600268F6A /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		CDB4081C1F0838D600268F6A /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		D27E94581E95338D00482F9B /* MockSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockSession.swift; sourceTree = "<group>"; };
 		FF7A69FEB0E311B8AC3DCDE3 /* Pods_SwiftNetworking_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftNetworking_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -34,6 +42,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CDB4080F1F08388300268F6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -42,6 +57,7 @@
 			children = (
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACE81AFB9204008FA782 /* Tests */,
+				CDB408141F08388300268F6A /* SwiftNetworking */,
 				607FACD11AFB9204008FA782 /* Products */,
 				6BF1E22DCDCE97F15D915165 /* Pods */,
 				84902A3B86B961CAA7AEC71D /* Frameworks */,
@@ -52,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACE51AFB9204008FA782 /* SwiftNetworking_Tests.xctest */,
+				CDB408131F08388300268F6A /* SwiftNetworking.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,7 +118,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CDB408141F08388300268F6A /* SwiftNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				CDB4081D1F0838D600268F6A /* Classes */,
+				CDB408151F08388300268F6A /* SwiftNetworking.h */,
+				CDB408161F08388300268F6A /* Info.plist */,
+			);
+			path = SwiftNetworking;
+			sourceTree = "<group>";
+		};
+		CDB4081D1F0838D600268F6A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CDB4081B1F0838D600268F6A /* NetworkClient.swift */,
+				CDB4081C1F0838D600268F6A /* Result.swift */,
+			);
+			name = Classes;
+			path = ../../SwiftNetworking/Classes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		CDB408101F08388300268F6A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDB408171F08388300268F6A /* SwiftNetworking.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		607FACE41AFB9204008FA782 /* SwiftNetworking_Tests */ = {
@@ -124,6 +172,24 @@
 			productReference = 607FACE51AFB9204008FA782 /* SwiftNetworking_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		CDB408121F08388300268F6A /* SwiftNetworking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDB4081A1F08388300268F6A /* Build configuration list for PBXNativeTarget "SwiftNetworking" */;
+			buildPhases = (
+				CDB4080E1F08388300268F6A /* Sources */,
+				CDB4080F1F08388300268F6A /* Frameworks */,
+				CDB408101F08388300268F6A /* Headers */,
+				CDB408111F08388300268F6A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftNetworking;
+			productName = SwiftNetworking;
+			productReference = CDB408131F08388300268F6A /* SwiftNetworking.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -138,6 +204,10 @@
 						CreatedOnToolsVersion = 6.3.1;
 						LastSwiftMigration = 0820;
 						TestTargetID = 607FACCF1AFB9204008FA782;
+					};
+					CDB408121F08388300268F6A = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -155,12 +225,20 @@
 			projectRoot = "";
 			targets = (
 				607FACE41AFB9204008FA782 /* SwiftNetworking_Tests */,
+				CDB408121F08388300268F6A /* SwiftNetworking */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		607FACE31AFB9204008FA782 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDB408111F08388300268F6A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -224,6 +302,15 @@
 			files = (
 				607FACEC1AFB9204008FA782 /* NetworkClientTests.swift in Sources */,
 				D27E94591E95338D00482F9B /* MockSession.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDB4080E1F08388300268F6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDB4081F1F0838D600268F6A /* Result.swift in Sources */,
+				CDB4081E1F0838D600268F6A /* NetworkClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +440,60 @@
 			};
 			name = Release;
 		};
+		CDB408181F08388300268F6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SwiftNetworking/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.patrickm.SwiftNetworking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CDB408191F08388300268F6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SwiftNetworking/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.patrickm.SwiftNetworking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -373,6 +514,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		CDB4081A1F08388300268F6A /* Build configuration list for PBXNativeTarget "SwiftNetworking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDB408181F08388300268F6A /* Debug */,
+				CDB408191F08388300268F6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

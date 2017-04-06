@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SwiftNetworking: 23d9fa7d5acb28b0fa218892ea8d687ddc9b2a8f
+  SwiftNetworking: fd8d2aedb7e6c9c6387098cfd7fc3406a8e13562
 
-PODFILE CHECKSUM: c8b0cef9c744ffe2ef7f08e2eaee60db48c1cfb8
+PODFILE CHECKSUM: 11830c1ae8c571fd210dc503d5b990deee666411
 
 COCOAPODS: 1.1.1

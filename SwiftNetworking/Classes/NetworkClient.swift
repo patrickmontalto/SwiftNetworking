@@ -9,7 +9,7 @@
 import Foundation
 
 /// Abstract networking client.
-public class NetworkClient {
+open class NetworkClient {
     typealias JSONDictionary = [String: Any]
     
     // MARK: - Types
@@ -77,6 +77,11 @@ public class NetworkClient {
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
         
+        // Add defaults
+        request.addValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json; charset=utf-8", forHTTPHeaderField: "Accept")
+        
+        
         // Add body
         if let parameters = parameters, method.acceptsBody, let body = try? JSONSerialization.data(withJSONObject: parameters, options: []) {
             request.httpBody = body
@@ -85,14 +90,15 @@ public class NetworkClient {
         return request
         
     }
-    /// Build and send a URLRequest.
+    
+    /// Build and send a URLRequest (raw network result)
     ///
     /// - parameter method: HTTP method
     /// - parameter path: path component
     /// - parameter queryItems: optional array of query items
     /// - parameter parameters: optional JSONDictionary of params
     /// - parameter completion: completion block called containing a Result object
-    func request(method method: Method = .get, _ path: String, queryItems: [URLQueryItem] = [], parameters: JSONDictionary? = nil, completion: ((NetworkResult) -> (Void))? = nil) {
+    func request(method: Method = .get, path: String, queryItems: [URLQueryItem] = [], parameters: JSONDictionary? = nil, completion:  ((NetworkResult) -> Void)? = nil) {
         // Make request
         let request = buildRequest(method: method, path: path, queryItems: queryItems, parameters: parameters)
         

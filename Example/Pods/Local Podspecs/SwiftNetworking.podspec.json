@@ -1,9 +1,9 @@
 {
   "name": "SwiftNetworking",
   "version": "0.1.0",
-  "summary": "A short description of SwiftNetworking.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/patrick.montalto@adnas.com/SwiftNetworking",
+  "summary": "A micro networking framework for Swift",
+  "description": "SwiftNetworking provides a thin NetworkClient class that builds and executes URLRequests.",
+  "homepage": "https://github.com/patrickmontalto/SwiftNetworking",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,7 +12,7 @@
     "patrick.montalto@adnas.com": "pmontalto@gmail.com"
   },
   "source": {
-    "git": "https://github.com/patrick.montalto@adnas.com/SwiftNetworking.git",
+    "git": "https://github.com/patrickmontalto/SwiftNetworking.git",
     "tag": "0.1.0"
   },
   "platforms": {
