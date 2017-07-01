@@ -9,7 +9,7 @@
 import Foundation
 
 /// Abstract networking client.
-public class NetworkClient {
+open class NetworkClient {
     typealias JSONDictionary = [String: Any]
     
     // MARK: - Types
