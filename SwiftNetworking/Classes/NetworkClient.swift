@@ -36,6 +36,9 @@ open class NetworkClient {
     }
     
     public enum Error: Swift.Error {
+        case missingData
+        case invalidData
+        case invalidJson
         case unknown
     }
     
